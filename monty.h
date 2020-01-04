@@ -40,4 +40,16 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+
+/* FUNCTIONS USED */
+void (*selector(char *opstr))(stack_t **stack, unsigned int line_number);
+
+int pall(stack_t **stack, unsigned int line_number);
+stack_t *push(stack_t **stack, unsigned int line_number);
+char **strsplit(char *buffer);
+
+/* GLOBAL VARIABLE */
+
+extern char **opvector;
+
 #endif

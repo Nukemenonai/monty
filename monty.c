@@ -11,8 +11,12 @@
 int main(int ac, char **av)
 {
 	FILE *fd;
-	char buffer[100];
+	char *buffer;
+	unsigned int line = 1;
+	void (*f)(stack_t **stack, unsigned int line_number);
+	stack_t *head = NULL;
 
+	buffer = malloc(100 * sizeof(char));
 	fd = fopen(av[1], "r");
 	if (ac != 2)
 	{
@@ -25,10 +29,18 @@ int main(int ac, char **av)
 		exit(EXIT_FAILURE);
 	}
 
-	while (fgets(buffer, 100, fd)!= NULL)
+	while (fgets(buffer, 100, fd) != NULL)
 	{
-		puts(buffer);
-	}
+	        opvector = strsplit(buffer);
+		f = selector(opvector[0]);
+		if (f == NULL)
+		{
+			dprintf(STDERR_FILENO,"L%d: unknown instruction %s\n",
+				line, opvector[0]);
+		}
+	        f(&head, line);
+		line++;
+     }
 
 	fclose(fd);
 	return (0);
