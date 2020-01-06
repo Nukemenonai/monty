@@ -21,6 +21,6 @@ void pint(stack_t **stack, unsigned int line_number)
 
 		if (temp->next == NULL)
 		{
-		        printf("%d", temp->n);
+		        printf("%d\n", temp->n);
 		}
 }

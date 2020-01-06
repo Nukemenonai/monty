@@ -1,6 +1,6 @@
 #include "monty.h"
 
-extern char **opvector;
+char **opvector;
 
 void (*selector(char *opstr))(stack_t **, unsigned int)
 {

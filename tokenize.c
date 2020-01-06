@@ -19,7 +19,7 @@ char **strsplit(char *buffer)
 	res = malloc((len + 1) * sizeof(char *));
 	if (res == NULL)
 		return (NULL);
-	tmp = strtok(dupl, " ");
+	tmp = strtok(dupl, " \n");
 	i = 0;
 
 	while (tmp != NULL)
@@ -31,7 +31,7 @@ char **strsplit(char *buffer)
 			return (NULL);
 		}
 		strcpy(res[i], tmp);
-		tmp = strtok(NULL, " ");
+		tmp = strtok(NULL, " \n");
 		++i;
 	}
 	res[i] = NULL;
