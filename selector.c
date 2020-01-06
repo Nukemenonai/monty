@@ -8,6 +8,7 @@ void (*selector(char *opstr))(stack_t **, unsigned int)
 	instruction_t opcodes[] = {
 		{"pall", pall},
 		{"push", push},
+		{"pop", pop},
 		{NULL, NULL}
 	};
 
@@ -16,7 +17,7 @@ void (*selector(char *opstr))(stack_t **, unsigned int)
 		if (strcmp(opcodes[i].opcode, opstr) == 0)
 		{
 			return (opcodes[i].f);
-                }
+		}
 		i++;
 	}
 	return (0);

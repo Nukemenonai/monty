@@ -1,6 +1,6 @@
 #include "monty.h"
 
-char **opvector;
+extern char **opvector;
 
 /**
  * main - test the code for operation codes
@@ -33,16 +33,16 @@ int main(int ac, char **av)
 
 	while (fgets(buffer, 100, fd) != NULL)
 	{
-	        opvector = strsplit(buffer);
+		opvector = strsplit(buffer);
 		f = selector(opvector[0]);
 		if (f == NULL)
 		{
-			dprintf(STDERR_FILENO,"L%d: unknown instruction %s\n",
+			dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n",
 				line, opvector[0]);
 		}
-	        f(&head, line);
+		f(&head, line);
 		line++;
-     }
+	}
 
 	fclose(fd);
 	return (0);

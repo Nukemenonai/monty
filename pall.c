@@ -3,8 +3,8 @@
 /**
  * pall - prints the elements of a linked list
  *
- * @h: the pointer to stack's first element
- * Return: size of the list.
+ * @stack: the pointer to stack's first element
+ * @line_number: line of the file being processed.
  */
 
 void pall(stack_t **stack, unsigned int line_number)
