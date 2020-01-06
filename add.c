@@ -26,7 +26,7 @@ void add(stack_t **stack, unsigned int line_number)
 
 	sum = temp->n;
 
-        if (temp->next == NULL)
+	if (temp->next == NULL)
 	{
 		repl = temp->prev;
 		repl->n += sum;
