@@ -45,5 +45,6 @@ int main(int ac, char **av)
 	}
 
 	fclose(fd);
+	_frees(opvector);
 	return (0);
 }
