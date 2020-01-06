@@ -1,6 +1,12 @@
 #include "monty.h"
 
-char **opvector;
+
+/**
+ * selector - selects the appropriate function for main
+ *
+ * @opstr: the string to evaluate
+ * Return: pointer to the function
+ */
 
 void (*selector(char *opstr))(stack_t **, unsigned int)
 {

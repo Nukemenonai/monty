@@ -3,8 +3,8 @@
 /**
  * pint - prints last item of stack
  *
- * @stack the pointer to the stack
- * @line_number line of the file being processed.
+ * @stack: the pointer to the stack
+ * @line_number: line of the file being processed.
  *
  */
 
@@ -21,6 +21,6 @@ void pint(stack_t **stack, unsigned int line_number)
 
 		if (temp->next == NULL)
 		{
-		        printf("%d\n", temp->n);
+			printf("%d\n", temp->n);
 		}
 }
