@@ -16,6 +16,8 @@ void (*selector(char *opstr))(stack_t **, unsigned int)
 		{"push", push},
 		{"pop", pop},
 		{"pint", pint},
+		{"add", add},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
