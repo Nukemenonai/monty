@@ -1,5 +1,7 @@
 #include "monty.h"
 
+char **opvector;
+
 /**
  * push - add node at the end of double linked list.
  *

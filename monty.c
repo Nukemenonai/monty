@@ -1,6 +1,6 @@
 #include "monty.h"
 
-extern char **opvector;
+char **opvector;
 
 /**
  * main - test the code for operation codes
