@@ -46,5 +46,7 @@ int main(int ac, char **av)
 
 	fclose(fd);
 	_frees(opvector);
+	free_dlistint(head);
+	free(buffer);
 	return (0);
 }
