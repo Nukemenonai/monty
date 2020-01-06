@@ -1,5 +1,7 @@
 #include "monty.h"
 
+char **opvector;
+
 /**
  * main - test the code for operation codes
  *
@@ -10,10 +12,10 @@
 
 int main(int ac, char **av)
 {
+	void (*f)(stack_t **, unsigned int);
 	FILE *fd;
 	char *buffer;
 	unsigned int line = 1;
-	void (*f)(stack_t **stack, unsigned int line_number);
 	stack_t *head = NULL;
 
 	buffer = malloc(100 * sizeof(char));

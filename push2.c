@@ -7,7 +7,7 @@
  * @line_number: data to populate the node
  * Return: the pointer to the new node
  */
-stack_t *push(stack_t **stack, unsigned int line_number)
+void push(stack_t **stack, unsigned int line_number)
 {
 
 	stack_t *new;
@@ -29,7 +29,6 @@ stack_t *push(stack_t **stack, unsigned int line_number)
 		*stack = new;
 		new->next = NULL;
 		last = new;
-		return (new);
 	}
 	else
 	{
@@ -40,6 +39,5 @@ stack_t *push(stack_t **stack, unsigned int line_number)
 		last->next = new;
 		new->prev = last;
 
-		return (new);
 	}
 }
